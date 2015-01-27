@@ -1,11 +1,17 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using ExerciseWebRole2.Database;
+using System;
 
 namespace ExerciseWebRole2.Models
 {
+
+   
+
     public class ExternalLoginConfirmationViewModel
     {
+        public String testc { get; set; }
+
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
