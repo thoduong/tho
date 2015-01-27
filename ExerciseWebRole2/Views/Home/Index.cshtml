@@ -1,0 +1,29 @@
+﻿@model ExerciseWebRole2.Models.ViewModel.HomeViewModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<h3>@ViewBag.Message</h3>
+<div>
+    <div class="title">
+        <span>Featured Products</span>
+    </div>
+    <div class="list_product">
+       
+        @foreach (var item in @Model.ListProductBelong)
+        {
+             <!--Product 1-->
+            <div class="spacing_product">
+                <div class="product" align="center">
+                    <div class="title"><a href="/Category/DetailProduct?product=@item.ProductID">@item.ProductName</a></div>
+                    <div class="img"><a href="/Category/DetailProduct?product=@item.ProductID"><img src="@item.Images" /></a></div>
+                    <div class="cost">starting at <b class="number">@item.ProductPrice</b></div>
+                    <div class="group_btn">                        
+                       
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

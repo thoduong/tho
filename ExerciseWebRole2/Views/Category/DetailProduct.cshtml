@@ -1,0 +1,22 @@
+﻿@model ExerciseWebRole2.Models.ViewModel.ProductDetailViewModel
+
+@{
+    ViewBag.Title = "DetailProduct";
+   
+}
+
+<h2>Detail Product</h2>
+<div class="spacing_product">
+    <div class="product" align="center">
+        <p>@Model.Product.ProductID</p>
+        <p>@Model.Product.ProductName</p>
+        <p>@Model.Product.ProductDescription</p>
+        <p>@Model.Product.ProductPrice</p>
+        <img src="@Model.Product.Images" />
+    </div>
+</div>
+
+
+
+
+

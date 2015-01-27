@@ -1,0 +1,19 @@
+﻿@using ExerciseWebRole2.Database
+@{
+    ViewBag.Title = "Catagory";
+    var list = ViewBag.ListEntry;
+    var lisPro = ViewBag.ListProduct;
+
+}
+<h2>Category</h2>
+<div>
+
+    @foreach (Category item in list)
+    {
+        <p>@item.CategoryName</p>
+    }
+</div>
+
+
+
+

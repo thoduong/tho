@@ -1,0 +1,90 @@
+﻿
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>My Website </title>
+    <link href="~/Azure_Project/css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+   
+    <div class="wrapper">
+        <header>
+            <div class="table">
+                <div class="row">
+                    <div class="cell valign" style="width: 28%;">
+                        <img src="~/Azure_Project/images/logo.png" />
+                    </div>
+                    <div class="cell valign" align="right">
+                        <ul>
+                            @Html.Partial("_LoginPartial")
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav class="hoz_menu">
+            <ul>
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>                                          
+             </ul>
+        </nav>        
+        <div class="content clearfix">
+            <div class="ver_menu">
+                <div class="title">
+                    <span>Categories</span>
+                </div>
+                <!--Vertical Menu-->
+                <nav>
+                    <ul>
+                        @if(@Model.ListCategory != null && @Model.ListCategory.Count != 0)
+                        {
+                            foreach (var cate in @Model.ListCategory)
+                            {
+                                <li><a href="/Category/Detail/@cate.CategoryID" title="Home">@cate.CategoryName</a></li>
+                            }
+                        }
+                    </ul>
+                </nav>
+
+                <!--Advertisement-->
+                <div class="ad">
+                    <a href="#" title="Learn more"><img src="~/Azure_Project/images/leftAd.jpg" /></a>
+                </div>
+            </div>
+            <div class="right_content">
+                @RenderBody()
+             
+            </div>
+        </div>
+
+        <hr />
+
+        <footer>
+            <ul>
+                <li><a href="index.html" title="Home">Home</a></li>
+                <li>|</li>
+                <li><a href="#" title="News">News</a></li>
+                <li>|</li>
+                <li><a href="#" title="Reviews">Reviews</a></li>
+                <li>|</li>
+                <li><a href="#" title="How-To's">How-To's</a></li>
+                <li>|</li>
+                <li><a href="#" title="Downloads">Downloads</a></li>
+                <li>|</li>
+                <li><a href="#" title="Shop & Compare">Shop & Compare</a></li>
+                <li>|</li>
+                <li><a href="#" title="Apps">Apps</a></li>
+                <li>|</li>
+                <li><a href="#" title="Business Center">Business Center</a></li>
+                <li>|</li>
+                <li><a href="#" title="FAQ">FAQ</a></li>
+                <li>|</li>
+                <li><a href="#" title="Contact Us">Contact Us</a></li>
+            </ul>
+            <span>TemplatesFreeLance.com © copyright 2014 - <a href="http://www.templatesfreelance.com/">Web Page Templates </a></span>
+        </footer>
+    </div>
+</body>
+</html>
+
