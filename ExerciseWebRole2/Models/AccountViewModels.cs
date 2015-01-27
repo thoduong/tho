@@ -10,7 +10,7 @@ namespace ExerciseWebRole2.Models
 
     public class ExternalLoginConfirmationViewModel
     {
-        public String testc { get; set; }
+        public String abc { get; set; }
 
         [Required]
         [Display(Name = "Email")]
